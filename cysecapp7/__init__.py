@@ -1,0 +1,1 @@
+default_app_config = "cysecapp7.apps.Cysecapp7Config"
