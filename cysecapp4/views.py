@@ -108,7 +108,7 @@ def api4_otp(request):
     user = get_object_or_404(User4, auth_token=auth_token)
     try_count = user.try_count
     if try_count > 4:
-        print("you are trying brute force for lack of resource and rate limitting")
+        print("you are trying brute force for lack of resource and rate limitting ")
     User4.objects.filter(auth_token=auth_token).update(try_count=try_count + 1)
 
     return JsonResponse({"status": "400", "message": "Failed Request"}, safe=False, status=status.HTTP_400_BAD_REQUEST)
@@ -117,7 +117,7 @@ def api4_otp(request):
 @api_view(['POST'])
 def api4_logout(request):
     logger.info('Api4 user logout started!')
-
+    print("kjzhjkhz")
     auth_token = request.environ.get('HTTP_AUTHORIZATION')
     user = get_object_or_404(User4, auth_token=auth_token)
     user = User4OtpSerializer(user, many=False)
