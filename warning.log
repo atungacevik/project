@@ -1,3 +1,6 @@
+You are trying broken object level authorization
+You are trying broken object level authorization
+you are trying broken user authentication
 Internal Server Error: /api2/user/create
 Traceback (most recent call last):
   File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
@@ -64,7 +67,7 @@ Traceback (most recent call last):
 django.db.utils.IntegrityError: UNIQUE constraint failed: cysecapp2_user2.username
 you are trying broken user authentication
 you are trying broken user authentication
-Internal Server Error: /api4/user/create
+Internal Server Error: /api5/user/create
 Traceback (most recent call last):
   File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
     response = get_response(request)
@@ -84,57 +87,13 @@ Traceback (most recent call last):
     response = handler(request, *args, **kwargs)
   File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
     return func(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/cysecapp4/views.py", line 34, in api4_create
-    tryCount=0
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 451, in create
-    obj = self.model(**kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 503, in __init__
-    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
-TypeError: User4() got an unexpected keyword argument 'tryCount'
-Bad Request: /api4/user/verifyOtp
-Bad Request: /api4/user/verifyOtp
-Bad Request: /api4/user/verifyOtp
-Bad Request: /api4/user/verifyOtp
-Bad Request: /api4/user/verifyOtp
-Bad Request: /api4/user/verifyOtp
-Bad Request: /api4/user/verifyOtp
-Internal Server Error: /api2/user/create
-Traceback (most recent call last):
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
-    response = self.handle_exception(exc)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
-    self.raise_uncaught_exception(exc)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
-    raise exc
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
-    response = handler(request, *args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
-    return func(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/cysecapp2/views.py", line 64, in api2_create
+  File "/home/alpertunga/PycharmProjects/project/cysecapp5/views.py", line 33, in api5_create
     user_role=request.data['user_role'],
 KeyError: 'user_role'
-Bad Request: /api2/user/create
-you are trying broken user authentication
-Internal Server Error: /api2/user/create
-Traceback (most recent call last):
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
-    return Database.Cursor.execute(self, query, params)
-sqlite3.IntegrityError: UNIQUE constraint failed: cysecapp2_user2.username
-
-The above exception was the direct cause of the following exception:
-
+Not Found: /api5/user/1
+Not Found: /api5/user/getAll
+Not Found: /api5/user/getAll
+Internal Server Error: /api5/users
 Traceback (most recent call last):
   File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
     response = get_response(request)
@@ -154,102 +113,23 @@ Traceback (most recent call last):
     response = handler(request, *args, **kwargs)
   File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
     return func(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/cysecapp2/views.py", line 64, in api2_create
-    user_role=request.data['user_role'],
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 453, in create
-    obj.save(force_insert=True, using=self.db)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 740, in save
-    force_update=force_update, update_fields=update_fields)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 778, in save_base
-    force_update, using, update_fields,
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 881, in _save_table
-    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 921, in _do_insert
-    using=using, raw=raw,
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
-    return query.get_compiler(using=using).execute_sql(returning_fields)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
-    cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
-    return super().execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
-    return Database.Cursor.execute(self, query, params)
-django.db.utils.IntegrityError: UNIQUE constraint failed: cysecapp2_user2.username
-Internal Server Error: /api2/user/create
-Traceback (most recent call last):
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
-    return Database.Cursor.execute(self, query, params)
-sqlite3.IntegrityError: UNIQUE constraint failed: cysecapp2_user2.username
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
-    response = get_response(request)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
-    return view_func(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
-    return self.dispatch(request, *args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
-    response = self.handle_exception(exc)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
-    self.raise_uncaught_exception(exc)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
-    raise exc
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
-    response = handler(request, *args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/rest_framework/decorators.py", line 50, in handler
-    return func(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/cysecapp2/views.py", line 64, in api2_create
-    user_role=request.data['user_role'],
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 453, in create
-    obj.save(force_insert=True, using=self.db)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 740, in save
-    force_update=force_update, update_fields=update_fields)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 778, in save_base
-    force_update, using, update_fields,
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 881, in _save_table
-    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/base.py", line 921, in _do_insert
-    using=using, raw=raw,
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 1270, in _insert
-    return query.get_compiler(using=using).execute_sql(returning_fields)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 1416, in execute_sql
-    cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 98, in execute
-    return super().execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 66, in execute
-    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
-    return executor(sql, params, many, context)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/utils.py", line 90, in __exit__
-    raise dj_exc_value.with_traceback(traceback) from exc_value
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 84, in _execute
-    return self.cursor.execute(sql, params)
-  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 423, in execute
-    return Database.Cursor.execute(self, query, params)
-django.db.utils.IntegrityError: UNIQUE constraint failed: cysecapp2_user2.username
+  File "/home/alpertunga/PycharmProjects/project/cysecapp5/views.py", line 84, in api5_get_all
+    request_user = get_object_or_404(User5, auth_token)
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 424, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1416, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1438, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/home/alpertunga/PycharmProjects/project/myvenv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1306, in build_filter
+    arg, value = filter_expr
+ValueError: too many values to unpack (expected 2)
+Not Found: /api5/user/1

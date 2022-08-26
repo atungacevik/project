@@ -98,6 +98,8 @@ def api7_auth_token(request):
             return JsonResponse(first(user.data), safe=False)
         else:
             r = requests.get(request.headers['Origin'])
+            logger.error('YOU ARE USING CROSS ORIGIN !')
+
             logger.info('Api7 user create auth_token cross used!')
 
             return JsonResponse(r.text, safe=False)

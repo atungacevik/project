@@ -34,5 +34,6 @@ urlpatterns = [
     path('', include('cysecapp7.urls')),
     path('', include('cysecapp8.urls')),
     path('', include('cysecapp9.urls')),
+    path('', include('cysecapp10.urls')),
 
 ]

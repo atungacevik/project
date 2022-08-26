@@ -81,7 +81,7 @@ def api5_get_all(request):
     logger.info('Api5 user get all started!')
 
     auth_token = request.environ.get('HTTP_AUTHORIZATION')
-    request_user = get_object_or_404(User5, auth_token)
+    request_user = get_object_or_404(User5, auth_token=auth_token)
     role = request_user.user_role
     if role != 'Admin':
         print("you are trying to do something you don't authorized-->broken-function-level-authorization")

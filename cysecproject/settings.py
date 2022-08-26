@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'cysecapp6',
     'cysecapp7',
     'cysecapp8',
-    'cysecapp9'
+    'cysecapp9',
+    'cysecapp10'
 
 ]
 

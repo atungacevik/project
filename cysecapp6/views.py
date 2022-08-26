@@ -25,6 +25,7 @@ def api6_create(request):
     if request.method == 'POST':
         if 'credit' in request.data:
             credit = request.data['credit']
+            logger.error("you are trying to mass assignment")
         else:
             credit = 0
 
